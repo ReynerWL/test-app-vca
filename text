@@ -1,0 +1,8 @@
+const firebaseConfig = {
+  apiKey: "AIzaSyBKHGxDygchHxkJppNWjVd5s0b6aiks5e4",
+  authDomain: "samtek-vca.firebaseapp.com",
+  projectId: "samtek-vca",
+  storageBucket: "samtek-vca.firebasestorage.app",
+  messagingSenderId: "299690038522",
+  appId: "1:299690038522:web:13f136556545eb2b75a543"
+};

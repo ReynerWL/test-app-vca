@@ -1,0 +1,34 @@
+# ── Python ────────────────────────────────
+__pycache__/
+*.py[cod]
+*.pyo
+
+# ── Model weights (download di container) ─
+*.pt
+*.onnx
+
+# ── Database (fresh di container) ─────────
+*.db
+*.sqlite3
+
+# ── Firebase credentials ──────────────────
+# Inject via environment variable / Docker secret
+firebase-key.json
+
+# ── Env ───────────────────────────────────
+.env
+.env.*
+
+# ── Captures ──────────────────────────────
+captures/
+
+# ── Video assets (mount via volume) ───────
+assets/
+
+# ── Git ───────────────────────────────────
+.git/
+.gitignore
+
+# ── Docs ──────────────────────────────────
+README.md
+*.md

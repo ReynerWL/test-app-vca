@@ -1,0 +1,29 @@
+version: '3.8'
+
+services:
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./assets:/app/assets        # Video files
+      - ./captures:/app/captures    # Truck captures
+      - ./firebase-key.json:/app/firebase-key.json  # FCM key
+    environment:
+      - VIDEO_SOURCE=assets/test_video.mp4
+      - FIREBASE_KEY_PATH=firebase-key.json
+      - PUBLIC_URL=http://localhost:8000
+      - YOLO_DEVICE=cpu
+    restart: unless-stopped
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    ports:
+      - "5173:80"
+    depends_on:
+      - backend
+    restart: unless-stopped

@@ -1,0 +1,14 @@
+fastapi==0.115.0
+uvicorn[standard]==0.30.0
+websockets==13.0
+opencv-python-headless==4.10.0.84
+ultralytics==8.2.103
+numpy==1.26.4
+firebase-admin==6.5.0
+pandas==2.2.2
+Pillow==10.4.0
+python-multipart==0.0.12
+aiofiles==24.1.0
+sqlalchemy==2.0.36
+aiosqlite==0.20.0
+aiortc==1.9.0

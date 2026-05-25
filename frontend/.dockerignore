@@ -1,0 +1,19 @@
+# ── Node ──────────────────────────────────
+node_modules/
+npm-debug.log*
+
+# ── Build output (build di container) ─────
+dist/
+.cache/
+
+# ── Env ───────────────────────────────────
+.env
+.env.*
+
+# ── Git ───────────────────────────────────
+.git/
+.gitignore
+
+# ── Docs ──────────────────────────────────
+README.md
+*.md

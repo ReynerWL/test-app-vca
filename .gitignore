@@ -1,0 +1,55 @@
+# ── Python ────────────────────────────────
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+
+# ── YOLO Model weights (besar, download otomatis) ──
+*.pt
+*.onnx
+
+# ── Database ──────────────────────────────
+*.db
+*.sqlite3
+
+# ── Firebase credentials (RAHASIA!) ──────
+firebase-key.json
+
+# ── Environment variables ─────────────────
+.env
+.env.local
+.env.*.local
+
+# ── Captures (foto truck, bisa besar) ────
+captures/
+
+# ── Video files ───────────────────────────
+assets/*.mp4
+assets/*.avi
+assets/*.mkv
+assets/*.m3u8
+
+backend/assets/*.mp4
+backend/assets/*.avi
+backend/assets/*.mkv
+backend/assets/*.m3u8
+
+# ── Node ──────────────────────────────────
+node_modules/
+dist/
+.cache/
+
+# ── Vite ──────────────────────────────────
+frontend/dist/
+
+# ── OS ────────────────────────────────────
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ── Editor ────────────────────────────────
+.vscode/settings.json
+.idea/
+*.swp
+*.swo
