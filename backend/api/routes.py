@@ -34,10 +34,6 @@ async def mjpeg_stream():
 # WebRTC
 @router.post("/webrtc/offer")
 async def webrtc_offer(body: dict):
-    """
-    Browser kirim SDP offer → backend jawab dengan SDP answer.
-    Setelah ini browser dan backend punya WebRTC connection.
-    """
     from streaming.webrtc_server import webrtc_offer as _offer
     return await _offer(body, processor)
 
@@ -63,11 +59,6 @@ async def websocket_counting(websocket: WebSocket):
 # Source Management
 @router.post("/api/source")
 async def change_source(body: dict):
-    """
-    Ganti sumber video tanpa restart backend.
-    Body: { "type": "file", "path": "assets/test.mp4" }
-          { "type": "rtsp", "url": "rtsp://user:pass@ip:554/stream" }
-    """
     if not processor:
         return {"error": "Processor belum berjalan"}
 
@@ -169,7 +160,6 @@ async def fcm_subscribe(body: dict):
 # Virtual Line
 @router.get("/api/line")
 async def get_line():
-    """Ambil posisi virtual line saat ini"""
     if not processor:
         return {"error": "Processor belum berjalan"}
     c = processor.counter
@@ -180,10 +170,6 @@ async def get_line():
 
 @router.post("/api/line")
 async def set_line(body: dict):
-    """
-    Update virtual line dari frontend.
-    Body: { "start": {"x": 0, "y": 180}, "end": {"x": 640, "y": 180} }
-    """
     if not processor:
         return {"error": "Processor belum berjalan"}
     try:
@@ -204,7 +190,6 @@ async def set_line(body: dict):
 
 @router.post("/api/line/reset")
 async def reset_line():
-    """Reset line ke posisi default dari config"""
     if not processor:
         return {"error": "Processor belum berjalan"}
     from config import LINE_START, LINE_END
